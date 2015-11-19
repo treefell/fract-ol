@@ -6,13 +6,13 @@
 /*   By: chuang <chuang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/07/06 11:52:33 by chuang            #+#    #+#             */
-/*   Updated: 2014/11/07 23:40:12 by chuang           ###   ########.fr       */
+/*   Updated: 2015/11/19 18:56:27 by chuang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlen(const char *str)
+size_t		ft_strlen(const char *str)
 {
 	size_t n;
 

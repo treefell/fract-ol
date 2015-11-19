@@ -6,13 +6,13 @@
 /*   By: chuang <chuang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/08 18:45:06 by chuang            #+#    #+#             */
-/*   Updated: 2015/01/21 15:18:44 by chuang           ###   ########.fr       */
+/*   Updated: 2015/11/19 18:57:56 by chuang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putnbr_fd(int nb, int fd)
+void	ft_putnbr_fd(int nb, int fd)
 {
 	if (nb == 2147483647)
 	{

@@ -6,13 +6,13 @@
 /*   By: chuang <chuang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/03 14:33:05 by chuang            #+#    #+#             */
-/*   Updated: 2014/11/07 11:30:40 by chuang           ###   ########.fr       */
+/*   Updated: 2015/11/19 19:00:51 by chuang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_bzero(void *s, size_t n)
+void		ft_bzero(void *s, size_t n)
 {
 	ft_memset(s, 0, n);
 }

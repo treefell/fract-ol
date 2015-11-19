@@ -6,13 +6,13 @@
 /*   By: chuang <chuang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/05 16:00:47 by chuang            #+#    #+#             */
-/*   Updated: 2014/11/05 16:24:43 by chuang           ###   ########.fr       */
+/*   Updated: 2015/11/19 19:00:43 by chuang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isascii(int c)
+int		ft_isascii(int c)
 {
 	return (c >= 0 && c <= 127);
 }

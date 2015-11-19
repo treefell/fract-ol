@@ -6,13 +6,13 @@
 /*   By: chuang <chuang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/04 15:22:12 by chuang            #+#    #+#             */
-/*   Updated: 2014/11/07 15:55:15 by chuang           ###   ########.fr       */
+/*   Updated: 2015/11/19 18:55:21 by chuang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strstr(const char *s1, const char *s2)
+char	*ft_strstr(const char *s1, const char *s2)
 {
 	int				i;
 	int				j;

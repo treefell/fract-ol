@@ -13,7 +13,7 @@
 #include "libft.h"
 #include <string.h>
 
-void *ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	unsigned int	i;
 	unsigned char	*newdst;
