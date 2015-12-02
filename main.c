@@ -6,7 +6,7 @@
 /*   By: chuang <chuang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/03 21:59:08 by chuang            #+#    #+#             */
-/*   Updated: 2015/11/19 18:29:32 by chuang           ###   ########.fr       */
+/*   Updated: 2015/11/26 18:28:32 by chuang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int		main(int ac, char *av[])
 {
 	if (ac > 1 && (!ft_strcmp(av[1], "mandel") || !ft_strcmp(av[1], "julia")
-				|| !ft_strcmp(av[1], "tree")))
+				|| !ft_strcmp(av[1], "tree") || !ft_strcmp(av[1], "tricorn")))
 	{
 		d_fractal(av[1]);
 	}

@@ -1,29 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   window.c                                           :+:      :+:    :+:   */
+/*   tricorn.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chuang <chuang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/03 22:33:58 by chuang            #+#    #+#             */
-/*   Updated: 2015/12/02 15:29:55 by chuang           ###   ########.fr       */
+/*   Created: 2015/11/26 18:20:16 by chuang            #+#    #+#             */
+/*   Updated: 2015/11/26 19:37:22 by chuang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-void	d_fractal(char *av)
+void			fml_tricorn(t_env *e)
 {
-	t_env	e;
+	int			i;
 
-	if (ft_strcmp(av, "mandel") == 0)
-		e.frac = 1;
-	else if (ft_strcmp(av, "julia") == 0)
-		e.frac = 2;
-	else if (ft_strcmp(av, "tree") == 0)
-		e.frac = 3;
-	else
-		e.frac = 4;
-	init_env(&e);
-	init_hook(&e, av);
+	i = 0;
+	e->fv.zoom_y = SCREEN_H / (e->fv.y_max - e->fv.y_min);
+	e->fv.c.i = e->fv.y / e->fv.zoom_y + e->fv.y_min;
+	e->fv.z.r = 0;
+	e->fv.z.i = 0;
+	i = 0;
+	while ((e->fv.z.r * e->fv.z.r) + (e->fv.z.i * e->fv.z.i) < 4
+			&& i < e->fv.maxiter)
+	{
+		e->fv.z.i = -e->fv.z.i;
+		e->fv.z = cpx_add(cpx_mult(e->fv.z, e->fv.z), e->fv.c);
+		i++;
+	}
+	put_pxl_image(e, smooth_color(e, i));
 }

@@ -6,7 +6,7 @@
 /*   By: chuang <chuang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/03 23:06:37 by chuang            #+#    #+#             */
-/*   Updated: 2015/11/19 18:35:34 by chuang           ###   ########.fr       */
+/*   Updated: 2015/11/26 18:35:15 by chuang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void			draw(t_env *e)
 	while (e->fv.x < SCREEN_L)
 	{
 		e->fv.y = 0;
-		e->fv.c.r = e->frac == 1 ?
+		e->fv.c.r = (e->frac == 1 || e->frac == 4) ?
 			e->fv.x / e->fv.zoom_x + e->fv.x_min : e->fv.c.r;
 		while (e->fv.y < SCREEN_H)
 		{
@@ -57,8 +57,10 @@ void			draw(t_env *e)
 				fml_mandel(e);
 			else if (e->frac == 2)
 				fml_julia(e);
-			else
+			else if (e->frac == 3)
 				fml_tree(e);
+			else
+				fml_tricorn(e);
 			e->fv.y++;
 		}
 		e->fv.x++;

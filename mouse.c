@@ -6,7 +6,7 @@
 /*   By: chuang <chuang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/11 18:49:56 by chuang            #+#    #+#             */
-/*   Updated: 2015/11/19 18:07:12 by chuang           ###   ########.fr       */
+/*   Updated: 2015/11/26 19:11:17 by chuang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ static void		mouse_zoom(t_env *e, double zoom_factor, int x, int y)
 
 	event_x = x * (e->fv.x_max - e->fv.x_min) / SCREEN_L + e->fv.x_min;
 	event_y = y * (e->fv.y_max - e->fv.y_min)
-		/ SCREEN_H + e->fv.y_min + zoom_factor;
+		/ SCREEN_H + e->fv.y_min;
 	e->fv.x_min = (e->fv.x_min - event_x) * zoom_factor + event_x;
 	e->fv.x_max = (e->fv.x_max - event_x) * zoom_factor + event_x;
 	e->fv.y_min = (e->fv.y_min - event_y) * zoom_factor + event_y;

@@ -6,7 +6,7 @@
 /*   By: chuang <chuang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/10 00:41:13 by chuang            #+#    #+#             */
-/*   Updated: 2015/11/19 18:25:01 by chuang           ###   ########.fr       */
+/*   Updated: 2015/11/26 18:40:14 by chuang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,10 @@ void			init_env(t_env *e)
 		init_julia(e);
 	else if (e->frac == 1)
 		init_mandel(e);
-	else
+	else if (e->frac == 3)
 		init_tree(e);
+	else
+		init_tricorn(e);
 }
 
 int				expose_hook(t_env *e)

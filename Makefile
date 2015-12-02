@@ -6,7 +6,7 @@
 #    By: chuang <chuang@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/03/14 17:34:15 by chuang            #+#    #+#              #
-#    Updated: 2015/11/18 23:29:10 by chuang           ###   ########.fr        #
+#    Updated: 2015/11/26 18:29:01 by chuang           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,6 +24,7 @@ SRC = complex.c\
 	  mandelbrot.c\
 	  julia.c\
 	  tree.c\
+	  tricorn.c\
 	  window.c
 
 OBJS = $(SRC:.c=.o)

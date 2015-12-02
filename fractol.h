@@ -6,7 +6,7 @@
 /*   By: chuang <chuang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/06 18:09:49 by chuang            #+#    #+#             */
-/*   Updated: 2015/11/19 18:43:12 by chuang           ###   ########.fr       */
+/*   Updated: 2015/11/26 18:40:51 by chuang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,10 +87,15 @@ int					expose_hook(t_env *e);
 
 void				fml_mandel(t_env *e);
 void				init_mandel(t_env *e);
+
 void				fml_julia(t_env *e);
 void				init_julia(t_env *e);
+
 void				fml_tree(t_env *e);
 void				init_tree(t_env *e);
+
+void				fml_tricorn(t_env *e);
+void				init_tricorn(t_env *e);
 
 void				put_pxl_image(t_env *e, t_color color);
 t_color				smooth_color(t_env *e, int i);
